@@ -1,9 +1,10 @@
 import { run } from "hardhat";
 
-export default async function verify(contractAddress: string | undefined, args: any) {
+export default async function verify(fileName:string, contractAddress: string | undefined, args: any) {
   try {
+    // contract: "contracts/simpleToken.sol:simpleToken",
     await run("verify:verify", {
-      // contract: "contracts/yuri_minter.sol:Yuri_Minter",
+      contract: fileName,
       address: contractAddress,
       constructorArguments: args,
     })

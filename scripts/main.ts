@@ -9,9 +9,9 @@ async function main() {
   const unlockTime = currentTimestampInSeconds + 60;
   // const amount = ethers.parseEther("100");
 
-  const addr = await deploy('PTX', [{ gasPrice: ethers.parseUnits('10', 'gwei') }]);
-  await verify(addr, []);
-  // await verify('0x4b48A26363093Be2539F9b63d07a87d6e96e1216', []);
+  // const addr = await deploy('Mine', ["0xA2dc8D106d09Eb63aE4eDDDE7B8de083ce49bba5","0xBe2762943E212a3aE5C9255C53ED17AEd189b5Cd", { gasPrice: ethers.parseUnits('10', 'gwei') }]);
+  // await verify("contracts/stake.sol:Mine", addr, ["0xA2dc8D106d09Eb63aE4eDDDE7B8de083ce49bba5","0xBe2762943E212a3aE5C9255C53ED17AEd189b5Cd"]);
+  // await verify('0xA2dc8D106d09Eb63aE4eDDDE7B8de083ce49bba5', []);
 }
 
 // We recommend this pattern to be able to use async/await everywhere

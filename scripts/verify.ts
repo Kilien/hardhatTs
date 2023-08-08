@@ -3,9 +3,9 @@ import { run } from "hardhat";
 async function main() {
   try {
     await run("verify:verify", {
-      contract: "contracts/ptx.sol:PTX",
-      address: '0xfCC4788A4Fd00A4aEa8BC43cB472Ce0a7f7a3917',
-      constructorArguments: [],
+      contract: "contracts/stake.sol:Mine",
+      address: '0x3F428cD8C976293377290980f5d58B958EDEc467',
+      constructorArguments: ["0xA2dc8D106d09Eb63aE4eDDDE7B8de083ce49bba5","0xBe2762943E212a3aE5C9255C53ED17AEd189b5Cd"],
     })
     console.log('Verifying Successful');
   } catch (e: any) {
