@@ -7,13 +7,53 @@ const endpoint = process.env.URL;
 
 const config: HardhatUserConfig = {
   solidity: {
-    version: '0.8.18',
-    settings: {
-        optimizer: {
-          enabled: true, // 合约优化
-          runs: 200,
+    compilers: [
+      {
+        version: '0.4.18',
+        settings: {
+          optimizer: {
+            enabled: true, // 合约优化
+            runs: 200,
+          }
         }
-    }
+      },
+      {
+        version: '0.5.16',
+        settings: {
+          optimizer: {
+            enabled: true, // 合约优化
+            runs: 200,
+          }
+        }
+      },
+      {
+        version: '0.6.2',
+        settings: {
+          optimizer: {
+            enabled: true, // 合约优化
+            runs: 200,
+          }
+        }
+      },
+      {
+        version: '0.6.6',
+        settings: {
+          optimizer: {
+            enabled: true, // 合约优化
+            runs: 200,
+          }
+        }
+      },
+      {
+        version: '0.8.18',
+        settings: {
+          optimizer: {
+            enabled: true, // 合约优化
+            runs: 200,
+          }
+        }
+      }
+    ]
   },
 
   networks: {
@@ -33,14 +73,14 @@ const config: HardhatUserConfig = {
       chainId: 421613,
       accounts: [`${PrivateKey}`],
       timeout: 600000000,
-  },
+    },
   },
   etherscan: {
-    apiKey:{
+    apiKey: {
       bscTestnet: process.env.BscKey as string,
       testMatic: process.env.MaticKey as string,
       testArb: process.env.ARBKey as string,
-    } 
+    }
   }
 };
 
